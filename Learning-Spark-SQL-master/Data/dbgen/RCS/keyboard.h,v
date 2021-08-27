@@ -1,0 +1,39 @@
+head	2.0;
+access;
+symbols;
+locks
+	mauricio:2.0; strict;
+comment	@ * @;
+
+
+2.0
+date	97.06.29.02.09.56;	author mauricio;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+2.0
+log
+@*** empty log message ***
+@
+text
+@/*
+ *  External global definitions in keyboard.c
+ */
+#define KEYBOARD_COLS 10
+#define KEYBOARD_ROWS 3
+
+extern char keyboard[][KEYBOARD_COLS];
+extern char rows[][4];
+extern char cols[][4];
+extern char inrow[], incolumn[];
+
+extern void key_substitutions();
+
+#define in_column(x) (incolumn[(x)])
+#define in_row(x)    (inrow[(x)])
+@
